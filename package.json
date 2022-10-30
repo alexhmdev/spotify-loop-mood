@@ -2,6 +2,16 @@
   "name": "spotify-loop-mood",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Alejandro Herrera Merlo",
+    "email": "alex13pks@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": "https://github.com/peckas13/spotify-loop-mood",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,5 +1,15 @@
 import Card from '../components/Card';
+import { Spotify } from '@styled-icons/bootstrap/Spotify';
 export default function Home() {
+  const login = async () => {
+    try {
+      const response = await fetch('/api/login');
+      const data = await response.json();
+      location.replace(data.url);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="grid h-screen place-items-center">
       <div className="text-center">
@@ -10,13 +20,16 @@ export default function Home() {
           Show your current loop on spotify and share your mood with your
           friends
         </div>
-      </div>
-      <div className="w-3/4 md:w-1/3">
-        <Card
-          title="Hola"
-          description="This is the card description: Id aliqua laborum amet laboris eiusmod duis consequat ex duis Lorem reprehenderit. Laboris sit deserunt ullamco enim amet nostrud aliquip eiusmod magna. Excepteur ipsum consequat irure est quis ipsum dolore nulla consequat dolore esse excepteur."
-          footer="footer"
-        />
+        <div className="mt-3">
+          <button
+            type="button"
+            className="text-2xl text-white bg-green-400 rounded-full px-4 inline-flex items-center py-2.5 text-center font-medium focus:ring-white hover:bg-green-600"
+            onClick={login}
+          >
+            <Spotify className="w-10 mr-2 h-10" />
+            Log in
+          </button>
+        </div>
       </div>
     </div>
   );

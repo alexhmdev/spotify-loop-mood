@@ -62,7 +62,7 @@ export default function Top() {
       <AppTitle title="Top tracks" />
       <div className="mt-12">
         <Card footer="From Spotify">
-          <ol className="text-center ">
+          <ol className=" ">
             {tracks.map((track, index) => (
               <li key={index} className="flex items-center gap-2 m-2">
                 <Image

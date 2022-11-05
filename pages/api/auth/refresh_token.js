@@ -2,6 +2,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { refresh_token } = req.body;
     if (!refresh_token) {
+      console.log('help');
       return res.status(400).json({
         ok: false,
         message: 'refresh_token not received',

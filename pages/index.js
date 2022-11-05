@@ -31,7 +31,7 @@ export default function Home() {
         return router.push('/');
       }
       router.push({
-        pathname: '/top',
+        pathname: '/menu',
         query: {
           access_token: data.responseToken.access_token,
           refresh_token: data.responseToken.refresh_token,

@@ -19,7 +19,6 @@ export default async function handler(req, res) {
           (key) => encodeURIComponent(key) + '=' + encodeURIComponent(body[key])
         )
         .join('&');
-      console.log(formBody);
       const getAccessToken = await fetch(
         'https://accounts.spotify.com/api/token',
         {
